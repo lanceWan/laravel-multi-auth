@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+require(__DIR__ . '/Routes/AdminAuth.php');
+
+Route::get('/home', 'HomeController@index');
